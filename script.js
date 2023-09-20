@@ -1,37 +1,34 @@
-// ********** set date ************
-// select span
-// const date = (document.getElementById(
-//   "date"
-// ).innerHTML = new Date().getFullYear());
+const testimonialCarousel = document.querySelector("#testimonial-carousel");
+const btnLeftTestimonial = document.querySelector(
+  "#testimonial-gallery-left-btn"
+);
+const btnRightTestimonial = document.querySelector(
+  "#testimonial-gallery-right-btn"
+);
 
-// ********** nav toggle ************
-// select button and links
-const navBtn = document.querySelector(".nav-toggle");
-const links = document.querySelector(".nav-links");
-// add event listener
-navBtn.addEventListener("click", () => {
-  links.classList.toggle("show-links");
+btnLeftTestimonial.addEventListener("click", () => {
+  testimonialCarousel.scrollTo({
+    left: testimonialCarousel.scrollLeft - 450,
+  });
 });
 
-// ********** smooth scroll ************
-// select links
-const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach(link => {
-  link.addEventListener("click", e => {
-    // prevent default
-    e.preventDefault();
-    links.classList.remove("show-links");
-
-    const id = e.target.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
-    //
-    let position = element.offsetTop - 62;
-
-    window.scrollTo({
-      left: 0,
-      // top: element.offsetTop,
-      top: position,
-      behavior: "smooth"
-    });
+btnRightTestimonial.addEventListener("click", () => {
+  testimonialCarousel.scrollTo({
+    left: testimonialCarousel.scrollLeft + 450,
   });
+});
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  initialSlide: 1,
+  centeredSlides: true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });

@@ -1,0 +1,281 @@
+/*
+=============== 
+Global
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background: #ffffff;
+  color: #000000ff;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.text-heading {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.text-desc {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  max-width: 29.25rem;
+}
+
+.btn-success {
+  border-radius: 2px;
+}
+/*
+=============== 
+Navbar
+===============
+*/
+.navbar {
+  background-color: #f1f3ffff;
+  padding: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/*
+=============== 
+Hero
+===============
+*/
+#hero {
+  background-color: #f1f3ffff;
+}
+.hero-title {
+  font-size: 2rem;
+  line-height: 3.375rem;
+  font-weight: 700;
+}
+
+/*
+=============== 
+Services
+===============
+*/
+#service {
+  margin-top: 3.75rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.service-list {
+  margin: 0rem;
+  padding: 0rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  max-width: 29.25rem;
+}
+.list {
+  margin-bottom: 1.25rem;
+}
+
+/*
+=============== 
+Why Us
+===============
+*/
+#why-us {
+  margin-top: 3.75rem;
+}
+.why-us-table {
+  padding-top: 1.875rem;
+}
+.why-us-card {
+  min-height: 11rem;
+}
+.why-us-img {
+  width: min-content;
+  height: 2.5rem;
+}
+.card-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1141px) {
+  .card {
+    min-height: 15rem;
+  }
+}
+
+/*
+=============== 
+Testimonials
+===============
+*/
+.testimonial-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+#testimonial-carousel {
+  scroll-snap-type: x proximity;
+  scroll-snap-align: center;
+  padding-top: 2.5rem;
+}
+.person {
+  max-width: 38rem;
+  min-height: 17rem;
+  background: #f1f3ff;
+  border-radius: 0.5rem;
+}
+.person-img {
+  padding-top: 6rem;
+}
+.card-body p {
+  width: 100%;
+}
+.btn-icon {
+  font-size: 0.9rem;
+}
+.btn-carousel {
+  border-color: #c4c4c4;
+  color: #222222;
+}
+.btn-carousel:hover {
+  background: #5cb85f;
+  color: white;
+}
+
+/*
+=============== 
+Getting Started
+===============
+*/
+#getting-started {
+  margin-top: 6rem;
+}
+.text-heading-banner {
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  font-weight: 700;
+}
+.card-started {
+  background-color: #0d28a6;
+  border-radius: 0.8125rem;
+  max-width: 1141px;
+}
+.text-banner {
+  margin-bottom: 3.25rem;
+}
+
+/*
+=============== 
+FAQ
+===============
+*/
+#faq {
+  margin-top: 5.625rem;
+  margin-bottom: 6.875rem;
+  max-width: 1141px;
+}
+.text-faq {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+.accordion-button {
+  border: 1px solid #d4d4d4;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+.text-footer {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.footer-nav {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-link:hover,
+.nav-link:hover {
+  color: #0d28a6 !important;
+}
+.icon-img,
+.icon-logo {
+  cursor: pointer;
+}
+
+/*
+=============== 
+Swiper
+===============
+*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  width: 60%;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+/* .swiper-button-next {
+  background-image: url('./img/chevron-right.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  display: inline-block;
+  margin: 0;
+}
+.swiper-button-prev {
+  background-image: url('./img/chevron-left.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  display: block;
+} */
+.swiper [class^="swiper-button-"] {
+  bottom: 0;
+  top: auto;
+  /* transform: translateX(-50%); */
+}
+.swiper-button-prev {
+  left: calc(48% - 15px);
+}
+
+.swiper-button-next {
+  right: calc(48% - 15px);
+}
