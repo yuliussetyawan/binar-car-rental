@@ -17,18 +17,3 @@ btnRightTestimonial.addEventListener("click", () => {
     left: testimonialCarousel.scrollLeft + 450,
   });
 });
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  initialSlide: 1,
-  centeredSlides: true,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});

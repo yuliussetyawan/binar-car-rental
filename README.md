@@ -31,7 +31,7 @@ Welcome to Binar Car Rental, your one-stop destination for hassle-free car renta
 To get started with Binar Car Rental, simply visit our website [here](#insert-website-link). You can explore our services, view testimonials, and rent your dream car with ease.
 
 ## Usage
-1. Visit the [Binar Car Rental Website](car-rental-binar-yulius.netlify.app).
+1. Visit the [Binar Car Rental Website](https://www.car-rental-binar-yulius.netlify.app).
 2. Navigate through the different sections of the website using the responsive navbar.
 3. Learn more about our services in the "Why Us" section.
 4. Read testimonials from our happy customers.
