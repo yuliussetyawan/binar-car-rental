@@ -184,7 +184,7 @@ Getting Started
 .card-started {
   background-color: #0d28a6;
   border-radius: 0.8125rem;
-  max-width: 1141px;
+  /* max-width: 1141px; */
 }
 .text-banner {
   margin-bottom: 3.25rem;
