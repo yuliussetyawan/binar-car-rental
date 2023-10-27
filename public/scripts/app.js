@@ -19,6 +19,7 @@ class Car {
 
   carAvailable = () => {
     let cars = "";
+    // load available cars
     Component.list
       .filter((car) => car.available)
       .map((car) => {
@@ -30,13 +31,11 @@ class Car {
   run = () => {
     let cars = "";
     let dateTime = Date.parse(this.date.value + "T" + this.pickTime.value);
-    let driverType = this.driverType.value === "true";
 
     const filteredCar = Component.list
       .filter(
         (car) =>
           Date.parse(car.availableAt) >= dateTime &&
-          car.available === driverType &&
           car.capacity >= this.passengerAmount.value
       )
       .map((car) => {
@@ -44,14 +43,14 @@ class Car {
         this.filterCarContainer.innerHTML = cars;
       });
 
-      if (filteredCar.length === 0) {
-        this.filterCarContainer.innerHTML = "";
-        this.alert.classList.remove("visually-hidden");
-      } else {
-        this.alert.classList.add("visually-hidden");
-      }
-
-    
+    if (filteredCar.length === 0) {
+      this.filterCarContainer.innerHTML = "";
+      this.alert.classList.remove("visually-hidden");
+      
+    } else {
+      this.alert.classList.add("visually-hidden");
+      console.log(dateTime);
+    }
   };
 
   clear = () => {

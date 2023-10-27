@@ -131,12 +131,12 @@ Hero
   font-weight: 700;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1141px) {
   .hero-text {
-    animation: slideFromLeft 3s ease-in-out 1;
+    animation: slideFromLeft 2s ease-in-out 1;
   }
   .hero-img {
-    animation: slideFromRight 3s ease-in-out 1;
+    animation: slideFromRight 2s ease-in-out 1;
   }
 }
 
@@ -309,16 +309,15 @@ Footer
   margin: 3rem auto;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(3, 1fr);
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 992px) {
   .cars {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1141px) {
   .cars {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /* Search Box */

@@ -15,6 +15,7 @@ app.get("/cars", (req, res) => {
   res.sendFile(PUBLIC_DIRECTORY + "/cars.html");
 });
 
+// if route doesn't exist, use middleware
 app.use((req, res) => {
   res.status(404).sendFile(PUBLIC_DIRECTORY + "/404.html");
 });
