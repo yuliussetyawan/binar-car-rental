@@ -301,3 +301,92 @@ Footer
 .icon-logo {
   cursor: pointer;
 }
+
+/* cars */
+.cars {
+  width: 80%;
+  padding: 2rem;
+  margin: 3rem auto;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 991px) {
+  .cars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .cars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Search Box */
+.search-box {
+  width: 100%;
+  bottom: -10%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Select Drop Down */
+.form-select {
+  width: 90%;
+  height: 2.5rem;
+  font-weight: lighter;
+  line-height: 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #8a8a8a;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.form-date {
+  width: 90%;
+  height: 2.5rem;
+  font-weight: lighter;
+  line-height: 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #8a8a8a;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding: 0 5px;
+}
+
+::placeholder {
+  font-size: 12px;
+}
+.search-container {
+  display: flex;
+}
+
+.filter-button {
+  margin-top: 1.6rem;
+  background-color: #5cb85f;
+}
+
+.reset-button {
+  margin-top: 1.6rem;
+  border-radius: 2px;
+}
+
+div label {
+  line-height: 18px;
+  font-weight: 300;
+  color: #3c3c3c;
+  font-size: 12px;
+  padding-bottom: 5px;
+  position: relative;
+  top: -4px;
+}

@@ -1,47 +1,39 @@
-# Binar Car Rental
+# Binar: Challenge 04
 
-Welcome to Binar Car Rental, your one-stop destination for hassle-free car rentals. Explore our modern and user-friendly car rental website, designed to make your car rental experience smooth and convenient.
+- Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
+- Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
 
-![Preview](./img/preview.PNG)
+# `Binar` class
 
-## Table of Contents
-- [Overview](#binar-car-rental)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Credits](#credits)
+Class ini berisi 1 static method saja, yang berfungsi untuk mengambil data mobil dari internet.
 
-## Features
-- **Navbar**: Easy navigation with a responsive navbar.
-- **Why Us**: Discover why Binar Car Rental is the best choice for your car rental needs.
-- **Testimonial**: Hear what our satisfied customers have to say about us.
-- **Banner**: Engaging banner section to showcase our services.
-- **FAQ Carousel**: An interactive carousel to answer common questions.
-- **Footer**: Connect with us and access important links.
+```typescript
+interface Car {
+  id: string;
+  plate: string;
+  manufacture: string;
+  model: string;
+  image: string;
+  rentPerDay: number;
+  capacity: number;
+  description: string;
+  transmission: string;
+  available: boolean;
+  type: string;
+  year: string;
+  options: Array<string>;
+  specs: Array<string>;
+}
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- Bootstrap 5
+interface Binar {
+  listCars(filterer: (car: Car) => boolean): Array<Car>
+}
+```
 
-## Getting Started
-To get started with Binar Car Rental, simply visit our website [here](#insert-website-link). You can explore our services, view testimonials, and rent your dream car with ease.
+Method `listCars` ini akan menerima fungsi yang mana harus mengembalikan `boolean` sebagai nilainya. 
+Fungsi ini akan dijalankan untuk masing-masing item di dalam list of cars, yang mana jika nilainya `true`,
+maka akan ditampilkan di dalam list tersebut.
 
-## Usage
-1. Visit the [Binar Car Rental Website](https://www.car-rental-binar-yulius.netlify.app).
-2. Navigate through the different sections of the website using the responsive navbar.
-3. Learn more about our services in the "Why Us" section.
-4. Read testimonials from our happy customers.
-5. Explore our car offerings through the engaging banner.
-6. Have questions? Check out our FAQ section.
-7. Contact us through the footer.
+# Tips
 
-## Contributing
-We welcome contributions to improve Binar Car Rental. If you have ideas, feature requests, or bug reports, please open an issue or create a pull request.
-
-## Credits
-This project is developed as a part of the Binar Bootcamp.
-
+Just, hack it bro!
