@@ -1,39 +1,66 @@
-# Binar: Challenge 04
+# Flow endpoint
 
-- Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
-- Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
+**4 layers:**
+1. Router: done
+2. Handler: done
+3. Service (Usecase): done
+4. Repository (Save/Get to/from the Database): done
 
-# `Binar` class
+---
 
-Class ini berisi 1 static method saja, yang berfungsi untuk mengambil data mobil dari internet.
+## Migration
 
-```typescript
-interface Car {
-  id: string;
-  plate: string;
-  manufacture: string;
-  model: string;
-  image: string;
-  rentPerDay: number;
-  capacity: number;
-  description: string;
-  transmission: string;
-  available: boolean;
-  type: string;
-  year: string;
-  options: Array<string>;
-  specs: Array<string>;
-}
+1. Create a migration for the "cars" table:
 
-interface Binar {
-  listCars(filterer: (car: Car) => boolean): Array<Car>
-}
-```
+   npx knex migrate:make create_cars_table
 
-Method `listCars` ini akan menerima fungsi yang mana harus mengembalikan `boolean` sebagai nilainya. 
-Fungsi ini akan dijalankan untuk masing-masing item di dalam list of cars, yang mana jika nilainya `true`,
-maka akan ditampilkan di dalam list tersebut.
 
-# Tips
+2. Run the migration:
 
-Just, hack it bro!
+   npx knex migrate:up
+
+
+
+![DB](db.png)
+
+
+## Endpoints
+
+1. **Get all cars:**
+   - http://localhost:3001/api/cars
+   ![GET ALL](preview/get_all.PNG)
+
+2. **Get car by id:**
+   - http://localhost:3001/api/cars/:id
+   ![GET ID](preview/get_by_id.PNG)
+
+3. **Get car by size category:**
+   - http://localhost:3001/api/category/:size
+   ![GET CATEGORY](preview/get_by_category.PNG)
+
+4. **Upload car (POST):**
+   - http://localhost:3001/api/cars
+   - **Body Parameters:**
+     - car_name (string)
+     - car_size (string)
+     - car_rent_price (int)
+     - car_photo (file)
+   -![UPLOAD CAR](preview/post.PNG)
+
+5. **Update car by id (PATCH):**
+   - http://localhost:3001/api/cars/:id
+   - **Body Parameters:**
+     - car_name (string)
+     - car_size (string)
+     - car_rent_price (int)
+     - car_photo (file)
+   - ![PATCH CAR](preview/patch.PNG)
+
+6. **Delete car by id (DELETE):**
+   - http://localhost:3001/api/cars/:id
+   ![PATCH CAR](preview/delete.PNG)
+
+
+## PGADMIN
+
+![PGADMIN](preview/pg_admin.PNG)
